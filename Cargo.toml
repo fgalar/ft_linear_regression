@@ -1,0 +1,19 @@
+[package]
+name = "ft_linear_regression"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+csv = "1.1.6"
+itertools = "0.10.3"
+plotly = { version = ">=0.7.0"}
+
+[[bin]]
+name = "prediction"
+path = "src/prediction.rs"
+
+[[bin]]
+name = "training"
+path = "src/training.rs"
