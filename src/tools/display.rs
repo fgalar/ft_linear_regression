@@ -36,7 +36,7 @@ fn display_learning_rate(cost_history: &Vec<f64>)
 
     let cost = Scatter::new(0..1000, cost_history.clone())
             .mode(Mode::Lines)
-            .name("lines");
+            .name("cost history by iteration");
 
     plot.add_trace(cost);
 

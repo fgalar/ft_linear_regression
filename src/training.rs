@@ -52,6 +52,7 @@ fn grad(x: &Vec<f64>, y: &Vec<f64>, theta: &Vec<f64>) -> Vec<f64>
           1.0 / (m as f64) * t1 ]
 }
 
+
 fn gradient_descent(x: &Vec<f64>, y: &Vec<f64>, mut theta: Vec<f64>,
                         learning_rate: f64, n_iterations: i32) -> (Vec<f64>, Vec<f64>){
     let mut cost_history: Vec<f64> = Vec::with_capacity(y.len());
@@ -69,6 +70,7 @@ fn gradient_descent(x: &Vec<f64>, y: &Vec<f64>, mut theta: Vec<f64>,
     (theta, cost_history)
 }
 
+
 fn main()
 {
     let data = Dataset::get_dataset();
@@ -82,5 +84,5 @@ fn main()
 
     let prediction = model(&data.km, &theta_final);
     display::schemas(&data, &cost_history, &prediction);
-    println!("{}", coef_determination(data.price, prediction));
+    println!("Determination coeficient is : {}", coef_determination(data.price, prediction));
 }
